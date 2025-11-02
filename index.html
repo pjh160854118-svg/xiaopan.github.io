@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 3px solid #eee;
+        }
+        .login-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .input-group input:focus {
+            border-color: #4096ff;
+        }
+        .input-group label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 15px;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: 0;
+            background-color: #fff;
+            padding: 0 5px;
+            font-size: 12px;
+            color: #4096ff;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #4096ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .login-btn:hover {
+            background-color: #3086e8;
+        }
+        .link-group {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .link-group a {
+            color: #4096ff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        .link-group a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- 指定头像文件 -->
+        <img src="f3ab5d6eb6e0a87ca4aa5bc7c08511841761916849835.jpg" alt="用户头像" class="avatar">
+        <h2 class="login-title">欢迎回来</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" id="username" required placeholder=" ">
+                <label for="username">用户名/手机号</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required placeholder=" ">
+                <label for="password">密码</label>
+            </div>
+            <button type="submit" class="login-btn">登录</button>
+        </form>
+        <div class="link-group">
+            <a href="#">忘记密码？</a>
+            <a href="#">注册账号</a>
+        </div>
+    </div>
+</body>
+</html>
